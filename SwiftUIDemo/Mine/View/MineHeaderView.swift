@@ -25,6 +25,6 @@ struct MineHeaderView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        MineHeaderView(image: Image("yukon_charleyrivers"))
+        MineHeaderView(image: Image("icon_addvillageabstract"))
     }
 }

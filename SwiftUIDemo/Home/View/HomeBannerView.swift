@@ -12,10 +12,11 @@ struct HomeBannerView: View {
     @EnvironmentObject var homeViewModel: HomeViewModel
     
     /// SwiftUI对定时器的简化，可以进去看看具体参数的定义
-    private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    
+    @ObservedObject var timerManager = TimerManager()
+
     /// 拖拽的偏移量
     @State var dragOffset: CGFloat = .zero
+
     ///当前显示的位置索引,
     ///这是实际数据中的1就是数据没有被处理之前的0位置的图片
     ///所以这里默认从1开始
@@ -52,6 +53,9 @@ struct HomeBannerView: View {
                                height: $0 == currentIndex ? geometry.size.height:geometry.size.height*0.8 )
                         .clipped() /// 裁减
                         .cornerRadius(10)
+                        .onTapGesture {
+                            print("点击了===")
+                        }
                 }
             }.frame(width:geometry.size.width,
                    height:geometry.size.height,alignment:.leading)
@@ -76,12 +80,18 @@ struct HomeBannerView: View {
                 }
              })
              /// 对定时器的监听
-             .onReceive(timer, perform: { _ in
-                currentIndex += 1
+             .onReceive(timerManager.timer, perform: { _ in
+                 currentIndex += 1
              })
             
         }).frame(width: homeViewModel.homeBannerWidth,
                 height: homeViewModel.homeBannerHeight)
+        .onAppear {
+            timerManager.startTimer()
+        }
+        .onDisappear {
+            timerManager.pauseTimer()
+        }
     }
 }
 
@@ -98,9 +108,12 @@ extension HomeBannerView{
                 
                 isAnimation = true
                 dragOffset = $0.translation.width
+
+                timerManager.pauseTimer()
             }
             /// 结束
             .onEnded {
+                timerManager.startTimer()
                 
                 dragOffset = .zero
                 /// 拖动右滑，偏移量增加，显示 index 减少

@@ -53,6 +53,9 @@
 		34DE0BB22590FD4E0095CFE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE0BB12590FD4E0095CFE6 /* UIColorExtension.swift */; };
 		34DE0BB72590FD670095CFE6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE0BB62590FD670095CFE6 /* ColorUtils.swift */; };
 		34DE0BBC2590FFD40095CFE6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE0BBB2590FFD40095CFE6 /* StringExtension.swift */; };
+		B43D7F442B60B50300367EB3 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D7F432B60B50300367EB3 /* TimerManager.swift */; };
+		B43D7F462B60C05600367EB3 /* CutDownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D7F452B60C05600367EB3 /* CutDownTimerView.swift */; };
+		B43D7F482B60C0BD00367EB3 /* InfanDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D7F472B60C0BD00367EB3 /* InfanDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,9 @@
 		34DE0BB12590FD4E0095CFE6 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		34DE0BB62590FD670095CFE6 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		34DE0BBB2590FFD40095CFE6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B43D7F432B60B50300367EB3 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		B43D7F452B60C05600367EB3 /* CutDownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutDownTimerView.swift; sourceTree = "<group>"; };
+		B43D7F472B60C0BD00367EB3 /* InfanDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfanDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +383,8 @@
 				34DE0B952590FAD30095CFE6 /* HomeServiceListView.swift */,
 				3485C36A2590A50F005A2FC9 /* HomeSnapshotView.swift */,
 				349ADE5225AD9C2200E29D86 /* HomeBannerDetailView.swift */,
+				B43D7F432B60B50300367EB3 /* TimerManager.swift */,
+				B43D7F452B60C05600367EB3 /* CutDownTimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,6 +418,7 @@
 		34DE0BAB2590FC8A0095CFE6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B43D7F472B60C0BD00367EB3 /* InfanDateFormatter.swift */,
 				34DE0BB02590FD340095CFE6 /* Extension */,
 				34DE0BAF2590FD2E0095CFE6 /* MarcoUtils */,
 			);
@@ -567,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C037162591DA5200C044C6 /* HomeServicePageView.swift in Sources */,
+				B43D7F442B60B50300367EB3 /* TimerManager.swift in Sources */,
 				34DE0BB72590FD670095CFE6 /* ColorUtils.swift in Sources */,
 				340FE0FF2587118F00C8AE5E /* MineLiseModel.swift in Sources */,
 				340FE1002587118F00C8AE5E /* MineView.swift in Sources */,
@@ -601,8 +611,10 @@
 				342B22EB25A2B9C7002B3DAE /* ServiceSectionView.swift in Sources */,
 				349A81222590F7B700D19230 /* HomeModel.swift in Sources */,
 				342276D8259432EF0095511C /* AroundModel.swift in Sources */,
+				B43D7F462B60C05600367EB3 /* CutDownTimerView.swift in Sources */,
 				340FE0E92587118000C8AE5E /* AroundView.swift in Sources */,
 				340FE1032587118F00C8AE5E /* MineListDetailView.swift in Sources */,
+				B43D7F482B60C0BD00367EB3 /* InfanDateFormatter.swift in Sources */,
 				3485C3782590ACB1005A2FC9 /* HomeCircleNewsView.swift in Sources */,
 				349ADE5325AD9C2200E29D86 /* HomeBannerDetailView.swift in Sources */,
 			);
